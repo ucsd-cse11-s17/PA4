@@ -21,6 +21,7 @@ class SampleTweets{
     t= new TLLink(textTweet4,t);
     t= new TLLink(textTweet2,t);
     t= new TLLink(textTweet1,t);
+    t= new TLLink(imageTweet11,t);
     t= new TLLink(imageTweet10,t);
     t= new TLLink(imageTweet9,t);
     t= new TLLink(imageTweet8,t);
@@ -30,7 +31,10 @@ class SampleTweets{
     t= new TLLink(imageTweet4,t);
     t= new TLLink(imageTweet2,t);
     t= new TLLink(imageTweet1,t);
-    t= new TLLink(quoteTweet10,t);
+    t= new TLLink(quoteTweet14,t);
+    t= new TLLink(quoteTweet13,t);
+    t= new TLLink(quoteTweet12,t);
+    t= new TLLink(quoteTweet11,t);
     t= new TLLink(quoteTweet9,t);
     t= new TLLink(quoteTweet8,t);
     t= new TLLink(quoteTweet7,t);
@@ -40,7 +44,7 @@ class SampleTweets{
     t= new TLLink(quoteTweet3,t);
     t= new TLLink(quoteTweet2,t);
     t= new TLLink(quoteTweet1,t);
-    
+
   }
 
   TextTweet textTweet1 = new TextTweet(new User("amyhoy","Amy Hoy"),new DateTime(4,14,2017), "home is where the cat is","852984006815731712",2);
@@ -68,17 +72,26 @@ class SampleTweets{
    ImageTweet imageTweet9 = new ImageTweet(new User("TheEllenShow", "Ellen DeGeneres"), new DateTime(2,3,2014), "If only Bradley's arm was longer. Best photo ever. #oscars","440322224407314432", "https://pbs.twimg.com/media/BhxWutnCEAAtEQ6.jpg", 36, 2373052);
    ImageTweet imageTweet10 = new ImageTweet(new User("googleresearch", "Google Research"), new DateTime(5, 12, 2016), "At #nips2016? Stop by the Google booth to play with the real-time style transfer and VR SimFarm demos during the morning coffee break!", "805701212091912192", "https://pbs.twimg.com/media/Cy5s87PWEAEYevZ.jpg", 210, 85);
 
-   QuoteTweet quoteTweet1 = new QuoteTweet(new User("ISS_CASIS", "ISS National Lab"), new DateTime(4, 18, 2017),"LIFTOFF! Go #Cygnus! Go #AtlasV!","805701212091912192-rt",imageTweet10);
-   QuoteTweet quoteTweet2 = new QuoteTweet(new User("Guggenheim", "Guggenheim Museum"), new DateTime(4, 18, 2017),"3/24 & 3/25 at 1pm—Final screenings of the documentary film \"Peggy Guggenheim: Art Addict\" for #WomensHistoryMonth. http://gu.gg/vIm0309y5DQ ","805701212091912192-rt-rt",quoteTweet1);
-   QuoteTweet quoteTweet3 = new QuoteTweet(new User("googleresearch", "Google Research"), new DateTime(4, 19,2017),"3/24 & 3/25 at 1pm—Final screen,ings of the documentary film \"Peggy Guggenheim: Art Addict\" for #WomensHistoryMonth. http://gu.gg/vIm0309y5DQ ","805701212091912192-rt-rt-rt",quoteTweet2);
-   QuoteTweet quoteTweet4 = new QuoteTweet(new User("ISS_CASIS", "ISS National Lab"),new DateTime(5, 12, 2016),"New ISS National Lab science is en route to @Space_Station onboard @OrbitalATK #Cygnus! Thanks to @ulalaunch for giving us a lift!", "819044196371800065-rt",textTweet7);
-   QuoteTweet quoteTweet5 = new QuoteTweet(new User("ISS_CASIS", "ISS National Lab"),new DateTime(5, 12, 2017),"Can you spot us on @NewYorker's cover? #LuciGutiérrez's \"Shelf Life\" wonderfully depicts Manhattan as a bookshelf! #FrankLloydWrightFridays", "819044196371800065-rt-rt",quoteTweet4);
-   QuoteTweet quoteTweet6 = new QuoteTweet(new User("googleresearch", "Google Research"), new DateTime(6, 12, 2017),"Tap below to watch election night coverage of the #FrenchElection LIVE on Twitter","819044196371800065-rt-rt",quoteTweet5);
-   QuoteTweet quoteTweet7 = new QuoteTweet(new User("googleresearch", "Google Research"), new DateTime(6, 12, 2017), "A warm welcome to Kingston. #Departures","819044196371800065-rt-rt-rt",quoteTweet6);
-   QuoteTweet quoteTweet8 = new QuoteTweet(new User("ISS_CASIS", "ISS National Lab"), new DateTime(7, 12, 2017),  "I'll give it a go ...","819044196371800065-rt-rt-rt-rt",quoteTweet7);
-   QuoteTweet quoteTweet9 = new QuoteTweet( new User("gov", "Twitter Government"),new DateTime(5,5,2017),"Awesome!","841326252866834432-rt",imageTweet8);
-   QuoteTweet quoteTweet10 = new QuoteTweet( new User("gov", "Twitter Government"),new DateTime(5,5,2017),"Awesome!","2389239479239-rt",textTweet8);
+   TextTweet textTweet10=new TextTweet(new User("onfireScarlett","Sasha"),new DateTime(1,1,2017),"Papi the King of banana milk ... @SpeCialsc2","8819471987600855041",65);
+   User fakeuser = new User("fakeuser","Fake User");
+   User bunny=new User("bunny","Mr. Bunny");
+   TextTweet textTweet11=new TextTweet(fakeuser,new DateTime(1,1,2016),"I","8819471987600855040",0);
+   QuoteTweet quoteTweet1=new QuoteTweet(fakeuser,new DateTime(1,2,2016),"love","8819471987600855040-rt",textTweet11,5);
+   QuoteTweet quoteTweet2 = new QuoteTweet(fakeuser, new DateTime(1,3,2016),"programming","8819471987600855040-rt-rt",quoteTweet1,100000);
+   QuoteTweet quoteTweet3 = new QuoteTweet(bunny, new DateTime(1,4,2016),"!","8819471987600855040-rt-rt-rt",quoteTweet2,10000000);
+   ImageTweet imageTweet11= new ImageTweet(bunny, new DateTime(16,4,2006),"I love bunny!","8819471987600855039","https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg",1);
 
+   QuoteTweet quoteTweet4 = new QuoteTweet(bunny, new DateTime(23,3,2007),"Q: What is a bunny's motto? A: Don't be mad, be hoppy! Read more at: http://www.ducksters.com/jokes/rabbit.php This text is Copyright © Ducksters.","8819471987600855039-rt",imageTweet11,1);
+   QuoteTweet quoteTweet5 = new QuoteTweet(bunny, new DateTime(23,4,2008),"Q: How do you know carrots are good for your eyes? A: Because you never see rabbits wearing glasses! Read more at: http://www.ducksters.com/jokes/rabbit.php This text is Copyright © Ducksters.","8819471987600855039-rt-rt",quoteTweet4,1);
+   QuoteTweet quoteTweet6 = new QuoteTweet(bunny, new DateTime(23,5,2009),"Fibonacci started with a pair of fictional and slightly unbelievable baby rabbits, a baby boy rabbit and a baby girl rabbit.","8819471987600855039-rt-rt-rt",quoteTweet5,2);
+   QuoteTweet quoteTweet7 = new QuoteTweet(bunny, new DateTime(23,6,2009),"They were fully grown after one month","8819471987600855039-rt-rt-rt-rt",quoteTweet6,3);
+   QuoteTweet quoteTweet8 = new QuoteTweet(bunny, new DateTime(23,7,2009),"and did what rabbits do best, so that the next month two more baby rabbits (again a boy and a girl) were born","8819471987600855039-rt-rt-rt-rt-rt",quoteTweet7,5);
+   QuoteTweet quoteTweet9 = new QuoteTweet(bunny, new DateTime(23,8,2009),"The next month these babies were fully grown and the first pair had two more baby rabbits (again, handily a boy and a girl).","8819471987600855039-rt-rt-rt-rt-rt-rt",quoteTweet8,8);
+   QuoteTweet quoteTweet10 = new QuoteTweet(bunny, new DateTime(23,9,2009),"Ignoring problems of in-breeding, the next month the two adult pairs each have a pair of baby rabbits and the babies from last month mature.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt",quoteTweet9,13);
+   QuoteTweet quoteTweet11 = new QuoteTweet(bunny, new DateTime(23,10,2009),"Fibonacci asked how many rabbits a single pair can produce after a year with this highly unbelievable breeding process (rabbits never die, every month each adult pair produces a mixed pair of baby rabbits who mature the next month). He realised that the number of adult pairs in a given month is the total number of rabbits (both adults and babies) in the previous month.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet10,21);
+   QuoteTweet quoteTweet12 = new QuoteTweet(bunny, new DateTime(23,11,2009),"Happy Fibonacci day! I love recursion!","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet11,34);
+   QuoteTweet quoteTweet13=new QuoteTweet(new User("onfireScarlett","Sasha"), new DateTime(5,1,2017),"See what I said one year ago","8819471987600855041-rt",textTweet10,89);
+   QuoteTweet quoteTweet14=new QuoteTweet(new User("Starcraft Esports","esportstarcraft"), new DateTime (5,2,2017),"Let's share a funny moment of professional SC2 players","8819471987600855041-rt-rt",quoteTweet13,60);
 
 
 }

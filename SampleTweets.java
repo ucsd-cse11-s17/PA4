@@ -11,8 +11,13 @@
 
 class SampleTweets{
   TweetList t;
+  /**
+   * Constructor for SimpleTweets that will return a TweetList that conatins all
+   * Tweets in the class.
+   */
   SampleTweets(){
     t = new TLEmpty();
+    t= new TLLink(textTweet10,t);
     t= new TLLink(textTweet9,t);
     t= new TLLink(textTweet8,t);
     t= new TLLink(textTweet7,t);
@@ -65,6 +70,7 @@ class SampleTweets{
 	 TextTweet textTweet7 = new TextTweet(new User("Markman", "Mark hemsworth"), new DateTime(12, 10, 2015), "Heap is dynamic memory allocation", "87394032849194");
 	 TextTweet textTweet8 = new TextTweet(new User("Lks21", "Luke Skywalker"), new DateTime(10, 9, 2016), "May the fourth be with you", "2389239479239");
    TextTweet textTweet9 = new TextTweet(new User("UCSDJacobs", "UCSD Engineering"), new DateTime(2,3,2014), "Triton eyes!", "844298273435344896", 24576);
+   TextTweet textTweet10=new TextTweet(new User("onfireScarlett","Sasha"),new DateTime(1,1,2017),"Papi the King of banana milk ... @SpeCialsc2","8819471987600855041",65);
 
    ImageTweet imageTweet6 = new ImageTweet(new User("jollie12", "John Oliver"), new DateTime(10, 11, 2016), "Stack is static memory allocation", "87394032849194", "https://trustedpartner.cachefly.net/images/library/PalmBeachAtlanticUniversity2015/PBA/TU-Academic/School%20of%20Arts%20and%20Sciences/mathematics-and-computer-science_2.jpg", 19);
  	 ImageTweet imageTweet7 = new ImageTweet(new User("Markman", "Mark hemsworth"), new DateTime(12, 10, 2015), "heap is dynamic memory allocation", "498237394982398", "https://trustedpartner.cachefly.net/images/library/PalmBeachAtlanticUniversity2015/PBA/TU-Academic/School%20of%20Arts%20and%20Sciences/mathematics-and-computer-science_2.jpg", 19);
@@ -72,7 +78,6 @@ class SampleTweets{
    ImageTweet imageTweet9 = new ImageTweet(new User("TheEllenShow", "Ellen DeGeneres"), new DateTime(2,3,2014), "If only Bradley's arm was longer. Best photo ever. #oscars","440322224407314432", "https://pbs.twimg.com/media/BhxWutnCEAAtEQ6.jpg", 36, 2373052);
    ImageTweet imageTweet10 = new ImageTweet(new User("googleresearch", "Google Research"), new DateTime(5, 12, 2016), "At #nips2016? Stop by the Google booth to play with the real-time style transfer and VR SimFarm demos during the morning coffee break!", "805701212091912192", "https://pbs.twimg.com/media/Cy5s87PWEAEYevZ.jpg", 210, 85);
 
-   TextTweet textTweet10=new TextTweet(new User("onfireScarlett","Sasha"),new DateTime(1,1,2017),"Papi the King of banana milk ... @SpeCialsc2","8819471987600855041",65);
    User fakeuser = new User("fakeuser","Fake User");
    User bunny=new User("bunny","Mr. Bunny");
    TextTweet textTweet11=new TextTweet(fakeuser,new DateTime(1,1,2016),"I","8819471987600855040",0);
@@ -82,14 +87,14 @@ class SampleTweets{
    ImageTweet imageTweet11= new ImageTweet(bunny, new DateTime(16,4,2006),"I love bunny!","8819471987600855039","https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg",1);
 
    QuoteTweet quoteTweet4 = new QuoteTweet(bunny, new DateTime(23,3,2007),"Q: What is a bunny's motto? A: Don't be mad, be hoppy! Read more at: http://www.ducksters.com/jokes/rabbit.php This text is Copyright © Ducksters.","8819471987600855039-rt",imageTweet11,1);
-   QuoteTweet quoteTweet5 = new QuoteTweet(bunny, new DateTime(23,4,2008),"Q: How do you know carrots are good for your eyes? A: Because you never see rabbits wearing glasses! Read more at: http://www.ducksters.com/jokes/rabbit.php This text is Copyright © Ducksters.","8819471987600855039-rt-rt",quoteTweet4,1);
-   QuoteTweet quoteTweet6 = new QuoteTweet(bunny, new DateTime(23,5,2009),"Fibonacci started with a pair of fictional and slightly unbelievable baby rabbits, a baby boy rabbit and a baby girl rabbit.","8819471987600855039-rt-rt-rt",quoteTweet5,2);
-   QuoteTweet quoteTweet7 = new QuoteTweet(bunny, new DateTime(23,6,2009),"They were fully grown after one month","8819471987600855039-rt-rt-rt-rt",quoteTweet6,3);
-   QuoteTweet quoteTweet8 = new QuoteTweet(bunny, new DateTime(23,7,2009),"and did what rabbits do best, so that the next month two more baby rabbits (again a boy and a girl) were born","8819471987600855039-rt-rt-rt-rt-rt",quoteTweet7,5);
-   QuoteTweet quoteTweet9 = new QuoteTweet(bunny, new DateTime(23,8,2009),"The next month these babies were fully grown and the first pair had two more baby rabbits (again, handily a boy and a girl).","8819471987600855039-rt-rt-rt-rt-rt-rt",quoteTweet8,8);
-   QuoteTweet quoteTweet10 = new QuoteTweet(bunny, new DateTime(23,9,2009),"Ignoring problems of in-breeding, the next month the two adult pairs each have a pair of baby rabbits and the babies from last month mature.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt",quoteTweet9,13);
-   QuoteTweet quoteTweet11 = new QuoteTweet(bunny, new DateTime(23,10,2009),"Fibonacci asked how many rabbits a single pair can produce after a year with this highly unbelievable breeding process (rabbits never die, every month each adult pair produces a mixed pair of baby rabbits who mature the next month). He realised that the number of adult pairs in a given month is the total number of rabbits (both adults and babies) in the previous month.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet10,21);
-   QuoteTweet quoteTweet12 = new QuoteTweet(bunny, new DateTime(23,11,2009),"Happy Fibonacci day! I love recursion!","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet11,34);
+   QuoteTweet quoteTweet5 = new QuoteTweet(bunny, new DateTime(23,4,2008),"Q: How do you know carrots are good for your eyes? A: Because you never see rabbits wearing glasses! Read more at: http://www.ducksters.com/jokes/rabbit.php This text is Copyright © Ducksters.","8819471987600855039-rt-rt",quoteTweet4,2);
+   QuoteTweet quoteTweet6 = new QuoteTweet(bunny, new DateTime(23,5,2009),"Fibonacci started with a pair of fictional and slightly unbelievable baby rabbits, a baby boy rabbit and a baby girl rabbit.","8819471987600855039-rt-rt-rt",quoteTweet5,3);
+   QuoteTweet quoteTweet7 = new QuoteTweet(bunny, new DateTime(23,6,2009),"They were fully grown after one month","8819471987600855039-rt-rt-rt-rt",quoteTweet6,5);
+   QuoteTweet quoteTweet8 = new QuoteTweet(bunny, new DateTime(23,7,2009),"and did what rabbits do best, so that the next month two more baby rabbits (again a boy and a girl) were born","8819471987600855039-rt-rt-rt-rt-rt",quoteTweet7,8);
+   QuoteTweet quoteTweet9 = new QuoteTweet(bunny, new DateTime(23,8,2009),"The next month these babies were fully grown and the first pair had two more baby rabbits (again, handily a boy and a girl).","8819471987600855039-rt-rt-rt-rt-rt-rt",quoteTweet8,13);
+   QuoteTweet quoteTweet10 = new QuoteTweet(bunny, new DateTime(23,9,2009),"Ignoring problems of in-breeding, the next month the two adult pairs each have a pair of baby rabbits and the babies from last month mature.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt",quoteTweet9,21);
+   QuoteTweet quoteTweet11 = new QuoteTweet(bunny, new DateTime(23,10,2009),"Fibonacci asked how many rabbits a single pair can produce after a year with this highly unbelievable breeding process (rabbits never die, every month each adult pair produces a mixed pair of baby rabbits who mature the next month). He realised that the number of adult pairs in a given month is the total number of rabbits (both adults and babies) in the previous month.","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet10,34);
+   QuoteTweet quoteTweet12 = new QuoteTweet(bunny, new DateTime(23,11,2009),"Happy Fibonacci day! I love recursion!","8819471987600855039-rt-rt-rt-rt-rt-rt-rt-rt-rt",quoteTweet11,55);
    QuoteTweet quoteTweet13=new QuoteTweet(new User("onfireScarlett","Sasha"), new DateTime(5,1,2017),"See what I said one year ago","8819471987600855041-rt",textTweet10,89);
    QuoteTweet quoteTweet14=new QuoteTweet(new User("Starcraft Esports","esportstarcraft"), new DateTime (5,2,2017),"Let's share a funny moment of professional SC2 players","8819471987600855041-rt-rt",quoteTweet13,60);
 

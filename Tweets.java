@@ -28,7 +28,7 @@ class DateTime {
   * @return a string that represents the HTML for datetime
   */
   String toHTML() {
-    return "<p id='datetime'>" + this.day + "/" + this.month + "/" + this.year + "</p>";
+    return "<p id='datetime'>" + this.month + "/" + this.day + "/" + this.year + "</p>";
   }
 
  /**
